@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<body>
+    <header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">AfriConnect Summit 2026</a>
+
+    <button class="menu-hamburger" aria-label="Ouvrir le menu">
+      <!-- icône burger, ex: 3 spans ou icône Bootstrap Icons -->
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="intervenants.html">Intervenants</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="toggle-theme" aria-label="Changer de thème">
+      <!-- icône soleil/lune -->
+    </button>
+  </nav>
+</header>
+<header><nav>...</nav></header>
+<main>
+  <section class="hero-interne">
+    <h1>Contact & Inscription</h1>
+  </section>
+
+  <section class="formulaire-infos">
+    <form id="form-inscription">
+        <input type="text" name="prenom" placeholder="Prénom" required> 
+
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+        <select name="pays" required>
+            <option value="">Sélectionnez votre pays</option>
+            <option value="senegal">Sénégal</option>
+            <option value="ghana">Ghana</option>
+            <option value="cote-ivoire">Côte d'Ivoire</option>
+            <!-- autres pays -->
+        </select>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+
+        
+
+      
+    </form>
+    <div class="infos-contact">
+        <p><i class="fas fa-map-marker-alt"></i> Adresse: 123 Rue de l'Innovation, Dakar, Sénégal</p>
+        <p><i class="fas fa-phone"></i> Téléphone: +221 33 123 45 67</p>
+        <p><i class="fas fa-envelope"></i> Email: info@aficonnectsummit2026.com</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Foire aux questions</h2>
+    <div class="faq-item">
+        <h3>Comment puis-je m'inscrire à l'événement ?</h3>
+        <p>Vous pouvez vous inscrire en remplissant le formulaire ci-dessus ou en nous contactant directement par email.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Y a-t-il des frais d'inscription ?</h3>
+        <p>L'inscription est gratuite pour tous les participants.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Où se déroule l'événement ?</h3>
+        <p>L'événement se déroulera à Dakar, Sénégal. L'adresse exacte est indiquée dans la section contact.</p>
+    </div>
+
+
+  </section>
+
+  <section class="carte">
+    <iframe src="https://maps.app.goo.gl/Yy6Ddzt7sbvKwAXN8" title="Localisation"></iframe>
+  </section>
+</main>
+<footer>
+  <div class="footer-colonnes">
+
+    <div class="footer-col">
+      <h3>AfriConnect Summit 2026</h3>
+      <p>La conférence tech panafricaine qui réunit développeurs, entrepreneurs et investisseurs du continent.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="intervenants.html">Intervenants</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Suivez-nous</h3>
+      <div class="reseaux-sociaux">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="copyright">&copy; <span id="annee"></span> AfriConnect Summit. Tous droits réservés.</p>
+
+  <button id="retour-haut" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  <!-- Réseaux sociaux (icônes de marques) -->
+<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+
+<!-- Bouton retour en haut -->
+<button id="retour-haut" aria-label="Retour en haut">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Icônes des thématiques (programme.html) -->
+<i class="fa-solid fa-microchip"></i>       <!-- IA & Tech -->
+<i class="fa-solid fa-chart-line"></i>       <!-- Business -->
+<i class="fa-solid fa-palette"></i>          <!-- Design -->
+<i class="fa-solid fa-database"></i>         <!-- Data -->
+
+<!-- Menu hamburger -->
+<button class="menu-hamburger" aria-label="Ouvrir le menu">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Toggle dark/light -->
+<button class="toggle-theme" aria-label="Changer de thème">
+  <i class="fa-solid fa-moon"></i>
+</button>
+</footer>
+</body>
+</html>
