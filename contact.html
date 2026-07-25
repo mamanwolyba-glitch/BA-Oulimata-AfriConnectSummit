@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AfriConnect Summit 2026 - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <body>
-    <header>
+
+<header>
   <nav class="navbar">
     <a href="index.html" class="logo">AfriConnect Summit 2026</a>
 
     <button class="menu-hamburger" aria-label="Ouvrir le menu">
-      <!-- icône burger, ex: 3 spans ou icône Bootstrap Icons -->
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <ul class="nav-links">
@@ -23,66 +25,138 @@
     </ul>
 
     <button class="toggle-theme" aria-label="Changer de thème">
-      <!-- icône soleil/lune -->
+      <i class="fa-solid fa-moon"></i>
     </button>
   </nav>
 </header>
-<header><nav>...</nav></header>
+
 <main>
+
   <section class="hero-interne">
     <h1>Contact & Inscription</h1>
+    <p class="fil-ariane"><a href="index.html">Accueil</a> &gt; Contact</p>
   </section>
 
   <section class="formulaire-infos">
+
     <form id="form-inscription">
-        <input type="text" name="prenom" placeholder="Prénom" required> 
 
-        <input type="text" name="nom" placeholder="Nom" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="telephone" placeholder="Téléphone" required>
-        <select name="pays" required>
-            <option value="">Sélectionnez votre pays</option>
-            <option value="senegal">Sénégal</option>
-            <option value="ghana">Ghana</option>
-            <option value="cote-ivoire">Côte d'Ivoire</option>
-            <!-- autres pays -->
-        </select>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
+      <label for="nom-complet">Nom complet</label>
+      <input type="text" id="nom-complet" name="nom-complet" placeholder="Votre nom complet" required>
+      <span class="erreur" id="erreur-nom"></span>
 
-        
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
+      <span class="erreur" id="erreur-email"></span>
 
-      
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone" required>
+      <span class="erreur" id="erreur-telephone"></span>
+
+      <label for="type-participation">Type de participation</label>
+      <select id="type-participation" name="type-participation" required>
+        <option value="">Sélectionnez une option</option>
+        <option value="participant">Participant</option>
+        <option value="intervenant">Intervenant</option>
+        <option value="sponsor">Sponsor</option>
+        <option value="presse">Presse</option>
+      </select>
+      <span class="erreur" id="erreur-type"></span>
+
+      <label for="pays">Pays</label>
+      <select id="pays" name="pays" required>
+        <option value="">Sélectionnez votre pays</option>
+        <option value="senegal">Sénégal</option>
+        <option value="ghana">Ghana</option>
+        <option value="cote-ivoire">Côte d'Ivoire</option>
+        <option value="mali">Mali</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="cameroun">Cameroun</option>
+        <option value="benin">Bénin</option>
+        <option value="togo">Togo</option>
+        <option value="burkina-faso">Burkina Faso</option>
+        <option value="rdc">République Démocratique du Congo</option>
+        <option value="maroc">Maroc</option>
+      </select>
+      <span class="erreur" id="erreur-pays"></span>
+
+      <label for="message">Message / Motivation</label>
+      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+      <span class="erreur" id="erreur-message"></span>
+
+      <button type="submit">Envoyer</button>
+
+      <p id="message-succes" class="cache">Votre inscription a bien été envoyée !</p>
+
     </form>
+
     <div class="infos-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Adresse: 123 Rue de l'Innovation, Dakar, Sénégal</p>
-        <p><i class="fas fa-phone"></i> Téléphone: +221 33 123 45 67</p>
-        <p><i class="fas fa-envelope"></i> Email: info@aficonnectsummit2026.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Adresse : 123 Rue de l'Innovation, Dakar, Sénégal</p>
+      <p><i class="fas fa-phone"></i> Téléphone : +221 33 123 45 67</p>
+      <p><i class="fas fa-envelope"></i> Email : info@africonnectsummit.com</p>
     </div>
+
   </section>
 
   <section class="faq">
     <h2>Foire aux questions</h2>
+
     <div class="faq-item">
-        <h3>Comment puis-je m'inscrire à l'événement ?</h3>
+      <input type="checkbox" id="faq1" class="faq-toggle">
+      <label for="faq1">Comment puis-je m'inscrire à l'événement ?</label>
+      <div class="faq-reponse">
         <p>Vous pouvez vous inscrire en remplissant le formulaire ci-dessus ou en nous contactant directement par email.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Y a-t-il des frais d'inscription ?</h3>
-        <p>L'inscription est gratuite pour tous les participants.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Où se déroule l'événement ?</h3>
-        <p>L'événement se déroulera à Dakar, Sénégal. L'adresse exacte est indiquée dans la section contact.</p>
+      </div>
     </div>
 
+    <div class="faq-item">
+      <input type="checkbox" id="faq2" class="faq-toggle">
+      <label for="faq2">Y a-t-il des frais d'inscription ?</label>
+      <div class="faq-reponse">
+        <p>L'inscription est gratuite pour tous les participants.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3" class="faq-toggle">
+      <label for="faq3">Où se déroule l'événement ?</label>
+      <div class="faq-reponse">
+        <p>L'événement se déroule à Dakar, Sénégal. L'adresse exacte est indiquée dans la section contact.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4" class="faq-toggle">
+      <label for="faq4">Puis-je devenir sponsor ?</label>
+      <div class="faq-reponse">
+        <p>Oui, contactez-nous par email pour connaître les différents niveaux de sponsoring disponibles.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq5" class="faq-toggle">
+      <label for="faq5">Les sessions seront-elles enregistrées ?</label>
+      <div class="faq-reponse">
+        <p>Oui, la majorité des sessions seront disponibles en ligne après l'événement.</p>
+      </div>
+    </div>
 
   </section>
 
   <section class="carte">
-    <iframe src="https://maps.app.goo.gl/Yy6Ddzt7sbvKwAXN8" title="Localisation"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123456.0!2d-17.4677!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDakar%2C+S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2ssn"
+      title="Localisation de la conférence"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
   </section>
+
 </main>
+
 <footer>
   <div class="footer-colonnes">
 
@@ -104,10 +178,10 @@
     <div class="footer-col">
       <h3>Suivez-nous</h3>
       <div class="reseaux-sociaux">
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
 
@@ -116,34 +190,9 @@
   <p class="copyright">&copy; <span id="annee"></span> AfriConnect Summit. Tous droits réservés.</p>
 
   <button id="retour-haut" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
-  <!-- Réseaux sociaux (icônes de marques) -->
-<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-<a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-
-<!-- Bouton retour en haut -->
-<button id="retour-haut" aria-label="Retour en haut">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- Icônes des thématiques (programme.html) -->
-<i class="fa-solid fa-microchip"></i>       <!-- IA & Tech -->
-<i class="fa-solid fa-chart-line"></i>       <!-- Business -->
-<i class="fa-solid fa-palette"></i>          <!-- Design -->
-<i class="fa-solid fa-database"></i>         <!-- Data -->
-
-<!-- Menu hamburger -->
-<button class="menu-hamburger" aria-label="Ouvrir le menu">
-  <i class="fa-solid fa-bars"></i>
-</button>
-
-<!-- Toggle dark/light -->
-<button class="toggle-theme" aria-label="Changer de thème">
-  <i class="fa-solid fa-moon"></i>
-</button>
 </footer>
+
 </body>
 </html>

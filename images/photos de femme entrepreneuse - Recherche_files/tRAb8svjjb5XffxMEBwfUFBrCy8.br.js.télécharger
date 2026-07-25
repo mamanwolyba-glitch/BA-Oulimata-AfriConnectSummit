@@ -1,0 +1,1 @@
+!function(e){for(var t=Math.floor(2*Math.random()),o=0;o<2;o++){var r,n=new Image,a="/fd/ls/l?BF=MSJ"+t+"&IG="+e.IG+'&TYPE=Event.ClientInst&dl=6&DATA=[{"T":"CI.BF","X":'+t,d=_w.ChatMergeLogHelper;void 0!==d&&"function"==typeof d.getBotRequestId&&(r=d.getBotRequestId())&&(n.src+=',"rid":"'+r+'"'),n.src=a+="}]",t^=1}}(_G);

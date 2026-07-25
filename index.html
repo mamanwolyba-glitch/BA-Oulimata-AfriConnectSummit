@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AfriConnect Summit 2026 - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <body>
-    <header>
+
+<header>
   <nav class="navbar">
     <a href="index.html" class="logo">AfriConnect Summit 2026</a>
 
     <button class="menu-hamburger" aria-label="Ouvrir le menu">
-      <!-- icône burger, ex: 3 spans ou icône Bootstrap Icons -->
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <ul class="nav-links">
@@ -23,34 +25,114 @@
     </ul>
 
     <button class="toggle-theme" aria-label="Changer de thème">
-      <!-- icône soleil/lune -->
+      <i class="fa-solid fa-moon"></i>
     </button>
   </nav>
 </header>
-<
-<div class="carte-thematique">
-  <i class="bi bi-cpu"></i> <!-- icône Bootstrap Icons -->
-  <h3>IA & Tech</h3>
-  <p>Les dernières avancées en intelligence artificielle appliquées aux réalités africaines.</p>
-</div>
 
-<div class="carte-thematique">
-  <i class="bi bi-graph-up-arrow"></i>
-  <h3>Business & Entrepreneuriat</h3>
-  <p>Financement, scaling et stratégies de croissance pour les startups du continent.</p>
-</div>
+<main>
 
-<div class="carte-thematique">
-  <i class="bi bi-palette"></i>
-  <h3>Design & UX</h3>
-  <p>Concevoir des produits numériques centrés sur les usagers africains.</p>
-</div>
+  <section class="hero">
+    <h1>AfriConnect Summit 2026</h1>
+    <p>Dakar, Sénégal · 15-17 Octobre 2026</p>
+    <div class="cta-boutons">
+      <a href="contact.html" class="btn-principal">S'inscrire</a>
+      <a href="programme.html" class="btn-secondaire">Voir le programme</a>
+    </div>
+    <div id="compte-a-rebours">
+      <div><span id="jours">00</span><p>Jours</p></div>
+      <div><span id="heures">00</span><p>Heures</p></div>
+      <div><span id="minutes">00</span><p>Minutes</p></div>
+      <div><span id="secondes">00</span><p>Secondes</p></div>
+    </div>
+  </section>
 
-<div class="carte-thematique">
-  <i class="bi bi-bar-chart-line"></i>
-  <h3>Data & Souveraineté</h3>
-  <p>Enjeux de gouvernance et de protection des données en Afrique francophone.</p>
-</div>
+  <section class="chiffres-cles">
+    <div class="stat">
+      <span class="compteur" data-cible="1200">0</span>
+      <p>Participants</p>
+    </div>
+    <div class="stat">
+      <span class="compteur" data-cible="48">0</span>
+      <p>Intervenants</p>
+    </div>
+    <div class="stat">
+      <span class="compteur" data-cible="3">0</span>
+      <p>Jours</p>
+    </div>
+    <div class="stat">
+      <span class="compteur" data-cible="12">0</span>
+      <p>Pays</p>
+    </div>
+  </section>
+
+  <section class="pourquoi-participer">
+    <h2>Pourquoi participer</h2>
+    <div class="argument">
+      <i class="fa-solid fa-network-wired"></i>
+      <h3>Réseau</h3>
+      <p>Connectez-vous avec les acteurs tech du continent africain.</p>
+    </div>
+    <div class="argument">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Innovation</h3>
+      <p>Découvrez les dernières tendances technologiques et solutions locales.</p>
+    </div>
+    <div class="argument">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Opportunités</h3>
+      <p>Trouvez des partenaires, investisseurs ou clients pour votre projet.</p>
+    </div>
+  </section>
+
+  <section class="intervenants-vedettes">
+    <h2>Intervenants vedettes</h2>
+    <div class="grille-vedettes">
+      <article class="carte-intervenant">
+        <img src="images/ways-to-promote-core-values.jpg" alt="Photo de Aminata Diallo">
+        <h3>Aminata Diallo</h3>
+        <p>Intelligence Artificielle · Sénégal</p>
+      </article>
+      <article class="carte-intervenant">
+        <img src="images/images.jpg2.jpg" alt="Photo de Fatoumata Diop">
+        <h3>Fatoumata Diop</h3>
+        <p>UX Design · Sénégal</p>
+      </article>
+      <article class="carte-intervenant">
+        <img src="images/woman_on_ipad_736_x_415_2.webp" alt="Photo de Aisha Bello">
+        <h3>Aisha Bello</h3>
+        <p>Data Science · Nigeria</p>
+      </article>
+      <article class="carte-intervenant">
+        <img src="images/image.jpg" alt="Photo de Jean-Pierre Kouadio">
+        <h3>Jean-Pierre Kouadio</h3>
+        <p>Business Development · Côte d'Ivoire</p>
+      </article>
+    </div>
+    <a href="intervenants.html" class="btn-secondaire">Voir tous les intervenants</a>
+  </section>
+
+  <section class="sponsors">
+    <h2>Nos sponsors</h2>
+    <div class="niveau-or">
+      <h3>Or</h3>
+      <p>Sponsor Or 1</p>
+    </div>
+    <div class="niveau-argent">
+      <h3>Argent</h3>
+      <p>Sponsor Argent 1</p>
+      <p>Sponsor Argent 2</p>
+    </div>
+    <div class="niveau-bronze">
+      <h3>Bronze</h3>
+      <p>Sponsor Bronze 1</p>
+      <p>Sponsor Bronze 2</p>
+      <p>Sponsor Bronze 3</p>
+    </div>
+  </section>
+
+</main>
+
 <footer>
   <div class="footer-colonnes">
 
@@ -72,10 +154,10 @@
     <div class="footer-col">
       <h3>Suivez-nous</h3>
       <div class="reseaux-sociaux">
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
 
@@ -84,35 +166,9 @@
   <p class="copyright">&copy; <span id="annee"></span> AfriConnect Summit. Tous droits réservés.</p>
 
   <button id="retour-haut" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
-  <!-- Réseaux sociaux (icônes de marques) -->
-<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-<a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-
-<!-- Bouton retour en haut -->
-<button id="retour-haut" aria-label="Retour en haut">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- Icônes des thématiques (programme.html) -->
-<i class="fa-solid fa-microchip"></i>       <!-- IA & Tech -->
-<i class="fa-solid fa-chart-line"></i>       <!-- Business -->
-<i class="fa-solid fa-palette"></i>          <!-- Design -->
-<i class="fa-solid fa-database"></i>         <!-- Data -->
-
-<!-- Menu hamburger -->
-<button class="menu-hamburger" aria-label="Ouvrir le menu">
-  <i class="fa-solid fa-bars"></i>
-</button>
-
-<!-- Toggle dark/light -->
-<button class="toggle-theme" aria-label="Changer de thème">
-  <i class="fa-solid fa-moon"></i>
-</button>
 </footer>
-    
+
 </body>
 </html>

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-
+    <title>AfriConnect Summit 2026 - Programme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <a href="index.html" class="logo">AfriConnect Summit 2026</a>
 
     <button class="menu-hamburger" aria-label="Ouvrir le menu">
-      <!-- icône burger, ex: 3 spans ou icône Bootstrap Icons -->
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <ul class="nav-links">
@@ -24,53 +25,195 @@
     </ul>
 
     <button class="toggle-theme" aria-label="Changer de thème">
-      <!-- icône soleil/lune -->
+      <i class="fa-solid fa-moon"></i>
     </button>
   </nav>
 </header>
-<table>
-  <thead>
-    <tr>
-      <th>Heure</th>
-      <th>Session</th>
-      <th>Intervenant</th>
-      <th>Salle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>09h00 - 09h30</td>
-      <td>Ouverture officielle</td>
-      <td>Comité d'organisation</td>
-      <td>Amphithéâtre A</td>
-    </tr>
-    <tr>
-      <td>09h30 - 10h30</td>
-      <td>L'IA au service de l'agriculture africaine</td>
-      <td>Aminata Diallo</td>
-      <td>Salle B</td>
-    </tr>
-    <tr>
-      <td>10h45 - 11h30</td>
-      <td>Lever des fonds en Afrique francophone</td>
-      <td>Kwame Mensah</td>
-      <td>Amphithéâtre A</td>
-    </tr>
-    <tr>
-      <td>11h45 - 12h30</td>
-      <td>UX Design pour marchés émergents</td>
-      <td>Fatou Ndiaye</td>
-      <td>Salle C</td>
-    </tr>
-    <tr>
-      <td>14h00 - 15h00</td>
-      <td>Data & souveraineté numérique</td>
-      <td>Jean-Baptiste Koffi</td>
-      <td>Salle B</td>
-    </tr>
-  </tbody>
-</table>
-    <footer>
+
+<main>
+
+  <section class="hero-interne">
+    <h1>Programme</h1>
+    <p class="fil-ariane"><a href="index.html">Accueil</a> &gt; Programme</p>
+  </section>
+
+  <section class="onglets">
+
+    <div class="onglets-boutons">
+      <button class="onglet-btn active" data-jour="jour1">Jour 1</button>
+      <button class="onglet-btn" data-jour="jour2">Jour 2</button>
+      <button class="onglet-btn" data-jour="jour3">Jour 3</button>
+    </div>
+
+    <div id="jour1" class="jour-content active">
+      <table>
+        <thead>
+          <tr>
+            <th>Heure</th>
+            <th>Session</th>
+            <th>Intervenant</th>
+            <th>Salle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09h00 - 09h30</td>
+            <td>Ouverture officielle</td>
+            <td>Comité d'organisation</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+          <tr>
+            <td>09h30 - 10h30</td>
+            <td>L'IA au service de l'agriculture africaine</td>
+            <td>Aminata Diallo</td>
+            <td>Salle B</td>
+          </tr>
+          <tr>
+            <td>10h45 - 11h30</td>
+            <td>Lever des fonds en Afrique francophone</td>
+            <td>Kwame Mensah</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+          <tr>
+            <td>11h45 - 12h30</td>
+            <td>UX Design pour marchés émergents</td>
+            <td>Fatou Ndiaye</td>
+            <td>Salle C</td>
+          </tr>
+          <tr>
+            <td>14h00 - 15h00</td>
+            <td>Data & souveraineté numérique</td>
+            <td>Jean-Baptiste Koffi</td>
+            <td>Salle B</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="jour2" class="jour-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Heure</th>
+            <th>Session</th>
+            <th>Intervenant</th>
+            <th>Salle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09h00 - 09h45</td>
+            <td>Cybersécurité en Afrique francophone</td>
+            <td>Aisha Bello</td>
+            <td>Salle B</td>
+          </tr>
+          <tr>
+            <td>10h00 - 10h45</td>
+            <td>Design Thinking appliqué au terrain africain</td>
+            <td>Samuel N'Djock</td>
+            <td>Salle C</td>
+          </tr>
+          <tr>
+            <td>11h00 - 11h45</td>
+            <td>Big Data et santé publique</td>
+            <td>Chika Okafor</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+          <tr>
+            <td>13h30 - 14h15</td>
+            <td>Financer sa startup tech</td>
+            <td>Jean-Pierre Kouadio</td>
+            <td>Salle B</td>
+          </tr>
+          <tr>
+            <td>14h30 - 15h15</td>
+            <td>Innovation et souveraineté technologique</td>
+            <td>Mariam Traoré</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="jour3" class="jour-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Heure</th>
+            <th>Session</th>
+            <th>Intervenant</th>
+            <th>Salle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09h00 - 09h45</td>
+            <td>UX Design pour l'inclusion numérique</td>
+            <td>Fatoumata Diop</td>
+            <td>Salle C</td>
+          </tr>
+          <tr>
+            <td>10h00 - 10h45</td>
+            <td>Panel : femmes dans la tech</td>
+            <td>Aminata Diallo & Aisha Bello</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+          <tr>
+            <td>11h00 - 11h45</td>
+            <td>Perspectives d'investissement 2027</td>
+            <td>Kwame Mensah</td>
+            <td>Salle B</td>
+          </tr>
+          <tr>
+            <td>13h30 - 14h15</td>
+            <td>Table ronde : IA responsable</td>
+            <td>Mariam Traoré</td>
+            <td>Salle C</td>
+          </tr>
+          <tr>
+            <td>14h30 - 15h30</td>
+            <td>Clôture et remise des prix</td>
+            <td>Comité d'organisation</td>
+            <td>Amphithéâtre A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <section class="thematiques">
+    <h2>Thématiques de la conférence</h2>
+
+    <div class="carte-thematique">
+      <i class="fa-solid fa-microchip"></i>
+      <h3>IA & Tech</h3>
+      <p>Les dernières avancées en intelligence artificielle appliquées aux réalités africaines.</p>
+    </div>
+
+    <div class="carte-thematique">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Business & Entrepreneuriat</h3>
+      <p>Financement, scaling et stratégies de croissance pour les startups du continent.</p>
+    </div>
+
+    <div class="carte-thematique">
+      <i class="fa-solid fa-palette"></i>
+      <h3>Design & UX</h3>
+      <p>Concevoir des produits numériques centrés sur les usagers africains.</p>
+    </div>
+
+    <div class="carte-thematique">
+      <i class="fa-solid fa-database"></i>
+      <h3>Data & Souveraineté</h3>
+      <p>Enjeux de gouvernance et de protection des données en Afrique francophone.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
   <div class="footer-colonnes">
 
     <div class="footer-col">
@@ -91,10 +234,10 @@
     <div class="footer-col">
       <h3>Suivez-nous</h3>
       <div class="reseaux-sociaux">
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
 
@@ -103,35 +246,9 @@
   <p class="copyright">&copy; <span id="annee"></span> AfriConnect Summit. Tous droits réservés.</p>
 
   <button id="retour-haut" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
-  <!-- Réseaux sociaux (icônes de marques) -->
-<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-<a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-
-<!-- Bouton retour en haut -->
-<button id="retour-haut" aria-label="Retour en haut">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- Icônes des thématiques (programme.html) -->
-<i class="fa-solid fa-microchip"></i>       <!-- IA & Tech -->
-<i class="fa-solid fa-chart-line"></i>       <!-- Business -->
-<i class="fa-solid fa-palette"></i>          <!-- Design -->
-<i class="fa-solid fa-database"></i>         <!-- Data -->
-
-<!-- Menu hamburger -->
-<button class="menu-hamburger" aria-label="Ouvrir le menu">
-  <i class="fa-solid fa-bars"></i>
-</button>
-
-<!-- Toggle dark/light -->
-<button class="toggle-theme" aria-label="Changer de thème">
-  <i class="fa-solid fa-moon"></i>
-</button>
 </footer>
-    
+
 </body>
 </html>
