@@ -408,3 +408,102 @@ th, td {
   cursor: pointer;
   display: none; /* caché par défaut, affiché en JS après 300px de scroll */
 }
+/* ============================================
+   RESPONSIVE : on adapte l'affichage selon
+   la taille de l'écran, du plus petit au plus grand
+   ============================================ */
+
+/* ----- MOBILE (dès 375px, styles par défaut déjà mobile-friendly) ----- */
+
+/* On cache le menu de liens et on affiche le bouton hamburger */
+.nav-links {
+  display: none;               /* caché par défaut sur mobile */
+  flex-direction: column;      /* les liens s'empilent quand affichés */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--couleur-fond);
+  padding: 1rem;
+}
+
+.nav-links.ouvert {
+  display: flex;  /* affiché quand le JS ajoute cette classe */
+}
+
+.menu-hamburger {
+  display: block;  /* visible sur mobile */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Sur mobile, les blocs empilés au lieu de côte à côte */
+.chiffres-cles,
+.pourquoi-participer,
+.formulaire-infos,
+#compte-a-rebours {
+  flex-direction: column;
+}
+
+.grille-vedettes,
+.grille-intervenants {
+  grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+}
+
+.thematiques {
+  grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+}
+
+.hero h1 {
+  font-size: 2rem; /* titre plus petit sur petit écran */
+}
+
+
+/* ----- TABLETTE (à partir de 768px) ----- */
+@media (min-width: 768px) {
+
+  /* Le menu hamburger disparaît, les liens reviennent côte à côte */
+  .menu-hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  .grille-vedettes,
+  .grille-intervenants {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+  }
+
+  .chiffres-cles,
+  .pourquoi-participer {
+    flex-direction: row; /* de nouveau côte à côte */
+  }
+
+}
+
+
+/* ----- DESKTOP (à partir de 1200px) ----- */
+@media (min-width: 1200px) {
+
+  .grille-vedettes,
+  .grille-intervenants {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+  }
+
+  .formulaire-infos {
+    flex-direction: row; /* formulaire et infos côte à côte */
+  }
+
+  .hero h1 {
+    font-size: 3.5rem; /* titre plus grand sur grand écran */
+  }
+
+}
