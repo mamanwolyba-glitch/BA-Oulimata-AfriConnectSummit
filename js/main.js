@@ -209,3 +209,145 @@ if (formulaire) {
   });
 
 }
+/* ============================================
+   ONGLETS DU PROGRAMME (page programme.html)
+   ============================================ */
+
+const ongletsBoutons = document.querySelectorAll('.onglet-btn');
+const joursContenu = document.querySelectorAll('.jour-content');
+
+ongletsBoutons.forEach(function(bouton) {
+
+  bouton.addEventListener('click', function() {
+
+    // On récupère le jour correspondant au bouton cliqué (ex: "jour2")
+    const jourCible = bouton.getAttribute('data-jour');
+
+    // 1. On enlève "active" de tous les boutons, puis on l'ajoute au bon
+    ongletsBoutons.forEach(function(b) {
+      b.classList.remove('active');
+    });
+    bouton.classList.add('active');
+
+    // 2. On cache tous les contenus, puis on affiche seulement le bon
+    joursContenu.forEach(function(contenu) {
+      contenu.classList.remove('active');
+    });
+    document.querySelector('#' + jourCible).classList.add('active');
+
+  });
+
+});
+
+
+/* ============================================
+   FILTRAGE DES INTERVENANTS (page intervenants.html)
+   ============================================ */
+
+const filtreBoutons = document.querySelectorAll('.filtre-btn');
+const cartesIntervenants = document.querySelectorAll('.carte-intervenant');
+
+filtreBoutons.forEach(function(bouton) {
+
+  bouton.addEventListener('click', function() {
+
+    // On récupère la catégorie du bouton cliqué (ex: "ia-tech" ou "tous")
+    const categorieChoisie = bouton.getAttribute('data-filtre');
+
+    // On met à jour le bouton actif visuellement
+    filtreBoutons.forEach(function(b) {
+      b.classList.remove('active');
+    });
+    bouton.classList.add('active');
+
+    // Pour chaque carte, on regarde si elle correspond au filtre
+    cartesIntervenants.forEach(function(carte) {
+
+      const categorieCarte = carte.getAttribute('data-categorie');
+
+      if (categorieChoisie === 'tous' || categorieCarte === categorieChoisie) {
+        carte.style.display = 'block'; // on affiche la carte
+      } else {
+        carte.style.display = 'none'; // on la cache
+      }
+
+    });
+
+  });
+
+});
+/* ============================================
+   ANIMATIONS AU SCROLL (IntersectionObserver)
+   ============================================ */
+
+// On sélectionne tous les éléments qu'on veut animer à l'apparition
+const elementsAAnimer = document.querySelectorAll(
+  '.argument, .carte-intervenant, .carte-thematique, .stat'
+);
+
+// L'observateur : il "regarde" si un élément entre dans l'écran
+const observateur = new IntersectionObserver(function(entrees) {
+
+  entrees.forEach(function(entree) {
+
+    // isIntersecting = true quand l'élément devient visible à l'écran
+    if (entree.isIntersecting) {
+      entree.target.classList.add('visible');
+    }
+
+  });
+
+}, {
+  threshold: 0.2 // se déclenche quand 20% de l'élément est visible
+});
+
+// On demande à l'observateur de surveiller chaque élément
+elementsAAnimer.forEach(function(element) {
+  observateur.observe(element);
+});
+/* ============================================
+   COMPTEURS ANIMÉS (chiffres clés sur l'accueil)
+   ============================================ */
+
+const compteurs = document.querySelectorAll('.compteur');
+
+// Fonction qui fait monter un chiffre de 0 jusqu'à sa valeur cible
+function animerCompteur(compteur) {
+
+  const cible = parseInt(compteur.getAttribute('data-cible')); // ex: 1200
+  let valeurActuelle = 0;
+  const increment = cible / 60; // on divise en 60 petites étapes
+
+  const intervalle = setInterval(function() {
+
+    valeurActuelle += increment;
+
+    if (valeurActuelle >= cible) {
+      compteur.textContent = cible; // on arrête pile sur la valeur finale
+      clearInterval(intervalle);     // on stoppe la boucle
+    } else {
+      compteur.textContent = Math.floor(valeurActuelle);
+    }
+
+  }, 20); // toutes les 20 millisecondes
+
+}
+
+// On réutilise IntersectionObserver pour ne lancer l'animation
+// que lorsque les compteurs deviennent visibles à l'écran
+const observateurCompteurs = new IntersectionObserver(function(entrees) {
+
+  entrees.forEach(function(entree) {
+
+    if (entree.isIntersecting) {
+      animerCompteur(entree.target);
+      observateurCompteurs.unobserve(entree.target); // on n'anime qu'une seule fois
+    }
+
+  });
+
+}, { threshold: 0.5 });
+
+compteurs.forEach(function(compteur) {
+  observateurCompteurs.observe(compteur);
+});
