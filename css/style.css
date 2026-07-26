@@ -451,7 +451,6 @@ th, td {
 .grille-intervenants {
   grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
 }
-
 .thematiques {
   grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
 }
@@ -506,4 +505,8 @@ th, td {
     font-size: 3.5rem; /* titre plus grand sur grand écran */
   }
 
+}
+.navbar.scrolled {
+  background-color: var(--couleur-fond);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }

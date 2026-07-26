@@ -40,3 +40,172 @@ boutonTheme.addEventListener('click', function() {
   }
 
 });
+/* ============================================
+   NAVBAR DYNAMIQUE : change d'apparence au scroll
+   ============================================ */
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+
+  // Si on a défilé de plus de 80px, on ajoute une classe
+  if (window.scrollY > 80) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+});
+
+
+/* ============================================
+   BOUTON RETOUR EN HAUT
+   ============================================ */
+
+const boutonRetourHaut = document.querySelector('#retour-haut');
+
+window.addEventListener('scroll', function() {
+
+  // On affiche le bouton seulement après 300px de scroll
+  if (window.scrollY > 300) {
+    boutonRetourHaut.style.display = 'flex';
+  } else {
+    boutonRetourHaut.style.display = 'none';
+  }
+
+});
+
+// Au clic sur le bouton, on remonte en haut avec une animation fluide
+boutonRetourHaut.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+/* ============================================
+   ANNÉE DYNAMIQUE DANS LE FOOTER
+   ============================================ */
+
+const spanAnnee = document.querySelector('#annee');
+spanAnnee.textContent = new Date().getFullYear();
+
+
+/* ============================================
+   VALIDATION DU FORMULAIRE (page contact)
+   ============================================ */
+
+const formulaire = document.querySelector('#form-inscription');
+
+// On vérifie que le formulaire existe sur cette page avant de continuer
+// (utile car ce script est chargé sur les 4 pages, mais le formulaire
+// n'existe que sur contact.html)
+if (formulaire) {
+
+  formulaire.addEventListener('submit', function(evenement) {
+
+    evenement.preventDefault(); // empêche l'envoi et le rechargement de page
+
+    let formulaireValide = true; // on suppose que tout est bon au départ
+
+    // ----- Nom complet -----
+    const nomComplet = document.querySelector('#nom-complet');
+    const erreurNom = document.querySelector('#erreur-nom');
+
+    if (nomComplet.value.trim() === '') {
+      erreurNom.textContent = 'Le nom complet est requis.';
+      nomComplet.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurNom.textContent = '';
+      nomComplet.style.borderColor = 'green';
+    }
+
+    // ----- Email (vérifié avec une expression régulière) -----
+    const email = document.querySelector('#email');
+    const erreurEmail = document.querySelector('#erreur-email');
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regexEmail.test(email.value)) {
+      erreurEmail.textContent = 'Veuillez entrer un email valide.';
+      email.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurEmail.textContent = '';
+      email.style.borderColor = 'green';
+    }
+
+    // ----- Téléphone (minimum 8 chiffres) -----
+    const telephone = document.querySelector('#telephone');
+    const erreurTelephone = document.querySelector('#erreur-telephone');
+    const chiffresUniquement = telephone.value.replace(/\D/g, ''); // enlève tout sauf les chiffres
+
+    if (chiffresUniquement.length < 8) {
+      erreurTelephone.textContent = 'Le téléphone doit contenir au moins 8 chiffres.';
+      telephone.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurTelephone.textContent = '';
+      telephone.style.borderColor = 'green';
+    }
+
+    // ----- Type de participation -----
+    const typeParticipation = document.querySelector('#type-participation');
+    const erreurType = document.querySelector('#erreur-type');
+
+    if (typeParticipation.value === '') {
+      erreurType.textContent = 'Veuillez choisir un type de participation.';
+      typeParticipation.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurType.textContent = '';
+      typeParticipation.style.borderColor = 'green';
+    }
+
+    // ----- Pays -----
+    const pays = document.querySelector('#pays');
+    const erreurPays = document.querySelector('#erreur-pays');
+
+    if (pays.value === '') {
+      erreurPays.textContent = 'Veuillez choisir un pays.';
+      pays.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurPays.textContent = '';
+      pays.style.borderColor = 'green';
+    }
+
+    // ----- Message (minimum 20 caractères) -----
+    const message = document.querySelector('#message');
+    const erreurMessage = document.querySelector('#erreur-message');
+
+    if (message.value.trim().length < 20) {
+      erreurMessage.textContent = 'Le message doit contenir au moins 20 caractères.';
+      message.style.borderColor = 'red';
+      formulaireValide = false;
+    } else {
+      erreurMessage.textContent = '';
+      message.style.borderColor = 'green';
+    }
+
+    // ----- Si tout est valide : on affiche le succès et on réinitialise -----
+    if (formulaireValide) {
+      const messageSucces = document.querySelector('#message-succes');
+      messageSucces.classList.remove('cache');
+
+      formulaire.reset(); // vide tous les champs
+
+      // On enlève les bordures vertes après reset
+      const champs = formulaire.querySelectorAll('input, select, textarea');
+      champs.forEach(function(champ) {
+        champ.style.borderColor = '';
+      });
+
+      // On cache le message de succès après 4 secondes
+      setTimeout(function() {
+        messageSucces.classList.add('cache');
+      }, 4000);
+    }
+
+  });
+
+}
