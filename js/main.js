@@ -351,3 +351,41 @@ const observateurCompteurs = new IntersectionObserver(function(entrees) {
 compteurs.forEach(function(compteur) {
   observateurCompteurs.observe(compteur);
 });
+/* ============================================
+   COMPTE À REBOURS EN TEMPS RÉEL (page accueil)
+   ============================================ */
+
+// Date fictive de la conférence : 15 octobre 2026, 9h00
+const dateConference = new Date('2026-10-15T09:00:00').getTime();
+
+const elementJours = document.querySelector('#jours');
+
+// On vérifie que l'élément existe (utile car le script tourne sur les 4 pages)
+if (elementJours) {
+
+  const intervalleCompteRebours = setInterval(function() {
+
+    const maintenant = new Date().getTime();
+    const tempsRestant = dateConference - maintenant;
+
+    // Si la date est déjà passée, on arrête tout
+    if (tempsRestant < 0) {
+      clearInterval(intervalleCompteRebours);
+      document.querySelector('#compte-a-rebours').textContent = 'La conférence a commencé !';
+      return;
+    }
+
+    // Conversion du temps restant (en millisecondes) en jours/heures/min/sec
+    const jours = Math.floor(tempsRestant / (1000 * 60 * 60 * 24));
+    const heures = Math.floor((tempsRestant % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((tempsRestant % (1000 * 60 * 60)) / (1000 * 60));
+    const secondes = Math.floor((tempsRestant % (1000 * 60)) / 1000);
+
+    document.querySelector('#jours').textContent = jours;
+    document.querySelector('#heures').textContent = heures;
+    document.querySelector('#minutes').textContent = minutes;
+    document.querySelector('#secondes').textContent = secondes;
+
+  }, 1000); // mise à jour chaque seconde
+
+}
