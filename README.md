@@ -29,7 +29,7 @@ Site responsive de 4 pages présentant AfriConnect Summit, une conférence tech 
 - Bouton retour en haut
 
 ## Lien du site
-[votre lien GitHub Pages]
+ https://mamanwolyba-glitch.github.io/BA-Oulimata-AfriConnectSummit/
 
 ## Ressources consultées
 - MDN Web Docs
